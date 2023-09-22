@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe MapquestService, :vcr do
-  it 'returns the weather for a given city,state' do
+  it 'returns the latitude and longitude for a given city,state' do
     location = "Denver,CO"
     service = MapquestService.new
-    json = service.get_lat_lon(location)
-    results = json[:results].first
+    response = service.get_lat_lon(location)
+    results = response[:results].first
     
     expect(results).to be_an(Hash)
     expect(results).to have_key(:providedLocation)
