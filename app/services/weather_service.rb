@@ -1,7 +1,19 @@
 class WeatherService
+  def initialize(latitude, longitude)
+    @lat = latitude
+    @lon = longitude
+  end
 
-  def get_current_weather(lat, lon)
-    get_url("/v1/current.json?q=#{lat},#{lon}")
+  def get_current
+    get_url("/v1/current.json?q=#{@lat},#{@lon}")
+  end
+
+  def get_5_days
+    get_url("/v1/forecast.json?q=#{@lat},#{@lon}&days=5")
+  end
+
+  def get_24_hours
+    get_url("/v1/forecast.json?q=#{@lat},#{@lon}&days=1")
   end
 
   def get_url(url)
