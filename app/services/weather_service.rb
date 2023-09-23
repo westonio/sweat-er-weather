@@ -4,16 +4,8 @@ class WeatherService
     @lon = longitude
   end
 
-  def get_current
-    get_url("/v1/current.json?q=#{@lat},#{@lon}")
-  end
-
-  def get_5_days
+  def get_forecast
     get_url("/v1/forecast.json?q=#{@lat},#{@lon}&days=5")
-  end
-
-  def get_24_hours
-    get_url("/v1/forecast.json?q=#{@lat},#{@lon}&days=1")
   end
 
   def get_url(url)

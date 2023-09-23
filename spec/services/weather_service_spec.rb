@@ -6,7 +6,7 @@ RSpec.describe WeatherService, :vcr do
       lat = 39.74001
       lon = -104.99202
       service = WeatherService.new(lat, lon)
-      response = service.get_current
+      response = service.get_forecast
 
       expect(response).to have_key(:location)
       expect(response[:location]).to be_a(Hash)
@@ -89,7 +89,7 @@ RSpec.describe WeatherService, :vcr do
       lat = 39.74001
       lon = -104.99202
       service = WeatherService.new(lat, lon)
-      response = service.get_5_days
+      response = service.get_forecast
 
       expect(response).to have_key(:location)
       expect(response[:location]).to be_a(Hash)
@@ -161,7 +161,7 @@ RSpec.describe WeatherService, :vcr do
       lat = 39.74001
       lon = -104.99202
       service = WeatherService.new(lat, lon)
-      response = service.get_24_hours
+      response = service.get_forecast
 
       expect(response).to have_key(:location)
       expect(response[:location]).to be_a(Hash)
@@ -188,7 +188,7 @@ RSpec.describe WeatherService, :vcr do
 
       expect(forecast).to have_key(:forecastday)
       expect(forecast[:forecastday]).to be_an(Array)
-      expect(forecast[:forecastday].count).to eq(1)
+      expect(forecast[:forecastday].count).to eq(5)
 
       day = forecast[:forecastday].first
       expect(day).to have_key(:date)
