@@ -60,9 +60,9 @@ RSpec.describe 'Users Requests', type: :request do
         expect(json).to be_a(Hash)
         expect(json).to have_key(:errors)
 
-        expect(json[:errors]).to be_an(Array)
-        expect(json[:errors].first).to have_key(:details)
-        expect(json[:errors].first[:details]).to eq("Validation failed: Email has already been taken")
+        expect(json[:errors]).to be_an(Hash)
+        expect(json[:errors]).to have_key(:details)
+        expect(json[:errors][:details]).to eq("Validation failed: Email has already been taken")
       end
 
       it 'sends error if passwords are not matching' do
@@ -85,9 +85,9 @@ RSpec.describe 'Users Requests', type: :request do
         expect(json).to be_a(Hash)
         expect(json).to have_key(:errors)
 
-        expect(json[:errors]).to be_an(Array)
-        expect(json[:errors].first).to have_key(:details)
-        expect(json[:errors].first[:details]).to eq("Validation failed: Password confirmation doesn't match Password")
+        expect(json[:errors]).to be_an(Hash)
+        expect(json[:errors]).to have_key(:details)
+        expect(json[:errors][:details]).to eq("Validation failed: Password confirmation doesn't match Password")
       end
     end
   end

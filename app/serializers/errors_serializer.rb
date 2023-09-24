@@ -5,11 +5,10 @@ class ErrorsSerializer
 
   def serialized_json
     {
-      "errors": [
+      "errors": 
           { 
             "details": @error_object.message,
           }
-      ]
     }
   end
 end
