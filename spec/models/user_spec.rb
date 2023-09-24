@@ -19,12 +19,12 @@ RSpec.describe User, type: :model do
   describe 'Model Methods' do
     it 'can create a new user with an api key' do
       user_params = { email: 'example@example.com', password: 'password', password_confirmation: 'password' }
+      user = User.new(user_params)
 
-      user = User.create_with_api_key(user_params)
+      expect(user.api_key).to be_nil
 
-      expect(user).to be_a(User)
-      expect(user.email).to eq(user_params[:email])
-      expect(user.password).to eq(user_params[:password])
+      user.generate_api_key
+
       expect(user.api_key).to_not be_nil
       expect(user.api_key).to be_a(String)
       expect(user.api_key.length).to eq(36)
