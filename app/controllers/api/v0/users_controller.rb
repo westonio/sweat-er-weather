@@ -1,9 +1,9 @@
 class Api::V0::UsersController < ApplicationController
-  def new; end
 
   def create
     begin
-      render json: UsersSerializer.new(User.create!(user_params)), status: :created
+      # require 'pry'; binding.pry
+      render json: UsersSerializer.new(User.create_with_api_key(user_params)), status: :created
     rescue StandardError => e
       require 'pry'; binding.pry
     end
