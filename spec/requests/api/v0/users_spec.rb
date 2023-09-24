@@ -40,11 +40,54 @@ RSpec.describe 'Users Requests', type: :request do
 
     context 'with invalid credentials' do
       it 'sends error if email already exists' do
+        User.create!(email: "whatever@example.com", password: "password", password_confirmation: "password")
+        params = {
+          "email": "whatever@example.com",
+          "password": "password",
+          "password_confirmation": "password"
+        }
+        headers = {"CONTENT_TYPE" => "application/json"}
 
+
+        expect do
+          post '/api/v0/users', headers: headers, params: JSON.generate(params)
+        end.to change(User, :count).by(0)
+
+        expect(response).to have_http_status(:bad_request)
+
+        json = JSON.parse(response.body, symbolize_names: true)
+
+        expect(json).to be_a(Hash)
+        expect(json).to have_key(:errors)
+
+        expect(json[:errors]).to be_an(Array)
+        expect(json[:errors].first).to have_key(:details)
+        expect(json[:errors].first[:details]).to eq("Validation failed: Email has already been taken")
       end
 
       it 'sends error if passwords are not matching' do
+        params = {
+          "email": "whatever@example.com",
+          "password": "password",
+          "password_confirmation": "NotTheSame"
+        }
+        headers = {"CONTENT_TYPE" => "application/json"}
 
+
+        expect do
+          post '/api/v0/users', headers: headers, params: JSON.generate(params)
+        end.to change(User, :count).by(0)
+
+        expect(response).to have_http_status(:bad_request)
+
+        json = JSON.parse(response.body, symbolize_names: true)
+
+        expect(json).to be_a(Hash)
+        expect(json).to have_key(:errors)
+
+        expect(json[:errors]).to be_an(Array)
+        expect(json[:errors].first).to have_key(:details)
+        expect(json[:errors].first[:details]).to eq("Validation failed: Password confirmation doesn't match Password")
       end
     end
   end
