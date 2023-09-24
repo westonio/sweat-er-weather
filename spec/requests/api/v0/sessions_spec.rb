@@ -5,9 +5,9 @@ RSpec.describe 'Session Requests', type: :request do
     
     context 'With valid login credentials' do
       it 'starts a session and returns the email/ api_key for the user' do
-        user = User.create!(email: "whatever@example.com", password: "password", password_confirmation: "password")
+        user = User.create!(email: "myemail@example.com", password: "password", password_confirmation: "password")
         params = {
-          "email": "whatever@example.com",
+          "email": "myemail@example.com",
           "password": "password"
         }
         headers = {"CONTENT_TYPE" => "application/json"}
@@ -42,7 +42,43 @@ RSpec.describe 'Session Requests', type: :request do
     end
 
     context 'With invalid login credentials' do
+      it 'returns a generic error for invalid email' do
+        User.create!(email: "myemail@example.com", password: "password", password_confirmation: "password")
+        params = {
+          "email": "INVALID@example.com",
+          "password": "password"
+        }
+        headers = {"CONTENT_TYPE" => "application/json"}
 
+        post '/api/v0/sessions', headers: headers, params: JSON.generate(params)
+
+        expect(response).to have_http_status(:unauthorized)
+
+        json  = JSON.parse(response.body, symbolize_names: true)
+
+        expect(json).to have_key(:errors)
+        expect(json[:errors]).to have_key(:details)
+        expect(json[:errors][:details]).to eq("Invalid email and/or password combination. Please Try again.")
+      end
+
+      it 'returns a generic error for invalid password' do
+        user = User.create!(email: "myemail@example.com", password: "password", password_confirmation: "password")
+        params = {
+          "email": "myemail@example.com",
+          "password": "InvalidPassword"
+        }
+        headers = {"CONTENT_TYPE" => "application/json"}
+
+        post '/api/v0/sessions', headers: headers, params: JSON.generate(params)
+
+        expect(response).to have_http_status(:unauthorized)
+
+        json  = JSON.parse(response.body, symbolize_names: true)
+
+        expect(json).to have_key(:errors)
+        expect(json[:errors]).to have_key(:details)
+        expect(json[:errors][:details]).to eq("Invalid email and/or password combination. Please Try again.")
+      end
     end
   end
 end
