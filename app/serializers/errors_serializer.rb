@@ -1,4 +1,4 @@
-class ErrorSerializer
+class ErrorsSerializer
   def initialize(error_object)
     @error_object = error_object
   end
