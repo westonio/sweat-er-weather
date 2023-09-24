@@ -23,7 +23,7 @@ RSpec.describe User, type: :model do
 
       expect(user.api_key).to be_nil
 
-      user.generate_api_key
+      user.send(:generate_api_key)
 
       expect(user.api_key).to_not be_nil
       expect(user.api_key).to be_a(String)
