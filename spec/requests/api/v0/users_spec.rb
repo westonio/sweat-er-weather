@@ -32,13 +32,20 @@ RSpec.describe 'Users Requests', type: :request do
         expect(attributes).to have_key(:email)
         expect(attributes[:email]).to be_a(String)
 
-        # expect(attributes).to have_key(:api_key)
-        # expect(attribute[:api_key]).to be_a(String)
+        expect(attributes).to have_key(:api_key)
+        expect(attributes[:api_key]).to be_a(String)
+        expect(attributes[:api_key].length).to eq(36)
       end
     end
 
     context 'with invalid credentials' do
+      it 'sends error if email already exists' do
 
+      end
+
+      it 'sends error if passwords are not matching' do
+
+      end
     end
   end
 end
