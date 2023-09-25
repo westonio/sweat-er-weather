@@ -30,7 +30,7 @@ private
   def format_weather(weather)
     {
       summary: weather[:condition],
-      temperature: weather[:temperature]
+      temperature: "#{weather[:temperature]} °F"
     }
   end
 end

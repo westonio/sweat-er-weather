@@ -75,7 +75,7 @@ RSpec.describe Forecast, type: :poro do
 
       expected = {
         summary: "Clear",
-        temperature: 82.4
+        temperature: "82.4 °F"
       }
 
       expect(@book.send(:format_weather, weather_data)).to eq(expected)
