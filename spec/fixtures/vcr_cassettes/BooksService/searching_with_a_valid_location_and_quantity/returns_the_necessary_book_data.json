@@ -1,0 +1,69 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://openlibrary.org/search.json?key=MY_SECRET_TOKEN&limit=2&title=taipei",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Server": [
+            "nginx/1.18.0 (Ubuntu)"
+          ],
+          "Date": [
+            "Mon, 25 Sep 2023 16:46:11 GMT"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Access-Control-Allow-Method": [
+            "GET, OPTIONS"
+          ],
+          "Access-Control-Max-Age": [
+            "86400"
+          ],
+          "X-Ol-Stats": [
+            "\"SR 1 0.135 TT 0 0.136\""
+          ],
+          "Referrer-Policy": [
+            "no-referrer-when-downgrade"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\n    \"numFound\": 255,\n    \"start\": 0,\n    \"numFoundExact\": true,\n    \"docs\": [\n        {\n            \"key\": \"/works/OL24411582W\",\n            \"type\": \"work\",\n            \"seed\": [\n                \"/books/OL32333152M\",\n                \"/books/OL33434012M\",\n                \"/books/OL34737572M\",\n                \"/books/OL33612124M\",\n                \"/books/OL34716676M\",\n                \"/works/OL24411582W\",\n                \"/subjects/city_planning_asia\",\n                \"/authors/OL2698054A\"\n            ],\n            \"title\": \"Globalizing Taipei\",\n            \"title_suggest\": \"Globalizing Taipei\",\n            \"title_sort\": \"Globalizing Taipei\",\n            \"edition_count\": 5,\n            \"edition_key\": [\n                \"OL32333152M\",\n                \"OL33434012M\",\n                \"OL34737572M\",\n                \"OL33612124M\",\n                \"OL34716676M\"\n            ],\n            \"publish_date\": [\n                \"2005\",\n                \"Jun 14, 2005\",\n                \"2006\"\n            ],\n            \"publish_year\": [\n                2005,\n                2006\n            ],\n            \"first_publish_year\": 2005,\n            \"number_of_pages_median\": 272,\n            \"isbn\": [\n                \"9781134326303\",\n                \"9781134326280\",\n                \"041575903X\",\n                \"1134326300\",\n                \"1134326289\",\n                \"9781134326310\",\n                \"1134326319\",\n                \"1280435704\",\n                \"9781280435706\",\n                \"9780415759038\"\n            ],\n            \"last_modified_i\": 1673943351,\n            \"ebook_count_i\": 0,\n            \"ebook_access\": \"no_ebook\",\n            \"has_fulltext\": false,\n            \"public_scan_b\": false,\n            \"cover_edition_key\": \"OL32333152M\",\n            \"cover_i\": 10955461,\n            \"publisher\": [\n                \"Taylor & Francis Group\",\n                \"Routledge\"\n            ],\n            \"language\": [\n                \"eng\"\n            ],\n            \"author_key\": [\n                \"OL2698054A\"\n            ],\n            \"author_name\": [\n                \"Reginald Kwok\"\n            ],\n            \"subject\": [\n                \"City planning, asia\"\n            ],\n            \"publisher_facet\": [\n                \"Routledge\",\n                \"Taylor & Francis Group\"\n            ],\n            \"subject_facet\": [\n                \"City planning, asia\"\n            ],\n            \"_version_\": 1767915655595556864,\n            \"author_facet\": [\n                \"OL2698054A Reginald Kwok\"\n            ],\n            \"subject_key\": [\n                \"city_planning_asia\"\n            ]\n        },\n        {\n            \"key\": \"/works/OL20639252W\",\n            \"type\": \"work\",\n            \"seed\": [\n                \"/books/OL35258261M\",\n                \"/books/OL27900361M\",\n                \"/books/OL32933576M\",\n                \"/books/OL35973807M\",\n                \"/books/OL36017431M\",\n                \"/works/OL20639252W\",\n                \"/subjects/nyt:young-adult-hardcover=2020-01-26\",\n                \"/subjects/new_york_times_bestseller\",\n                \"/subjects/young_adult_fiction_diversity_&_multicultural\",\n                \"/subjects/young_adult_fiction_coming_of_age\",\n                \"/subjects/young_adult_fiction_romance_romantic_comedy\",\n                \"/authors/OL7898165A\"\n            ],\n            \"title\": \"Loveboat, Taipei\",\n            \"title_suggest\": \"Loveboat, Taipei\",\n            \"title_sort\": \"Loveboat, Taipei\",\n            \"edition_count\": 5,\n            \"edition_key\": [\n                \"OL35258261M\",\n                \"OL27900361M\",\n                \"OL32933576M\",\n                \"OL35973807M\",\n                \"OL36017431M\"\n            ],\n            \"publish_date\": [\n                \"2020\",\n                \"Jan 07, 2020\",\n                \"2021\"\n            ],\n            \"publish_year\": [\n                2020,\n                2021\n            ],\n            \"first_publish_year\": 2020,\n            \"number_of_pages_median\": 208,\n            \"publish_place\": [\n                \"New York, USA\"\n            ],\n            \"lcc\": [\n                \"PZ-0007.10000000.W43565Lo 2020\"\n            ],\n            \"isbn\": [\n                \"9781094106465\",\n                \"9781094106489\",\n                \"0062957287\",\n                \"0062957279\",\n                \"9780062957290\",\n                \"9780062957276\",\n                \"0062957295\",\n                \"1094106461\",\n                \"9780062957283\",\n                \"1094106488\"\n            ],\n            \"last_modified_i\": 1670133172,\n            \"ebook_count_i\": 0,\n            \"ebook_access\": \"no_ebook\",\n            \"has_fulltext\": false,\n            \"public_scan_b\": false,\n            \"readinglog_count\": 16,\n            \"want_to_read_count\": 16,\n            \"currently_reading_count\": 0,\n            \"already_read_count\": 0,\n            \"cover_edition_key\": \"OL27900361M\",\n            \"cover_i\": 9255235,\n            \"publisher\": [\n                \"HarperCollins B and Blackstone Publishing\",\n                \"HarperTeen\",\n                \"Harpercollins\",\n                \"HarperCollins Publishers\",\n                \"Blackstone Pub\"\n            ],\n            \"language\": [\n                \"eng\"\n            ],\n            \"author_key\": [\n                \"OL7898165A\"\n            ],\n            \"author_name\": [\n                \"Abigail Hing Wen\"\n            ],\n            \"subject\": [\n                \"nyt:young-adult-hardcover=2020-01-26\",\n                \"New York Times bestseller\",\n                \"Young adult fiction, diversity & multicultural\",\n                \"Young adult fiction, coming of age\",\n                \"Young adult fiction, romance, romantic comedy\"\n            ],\n            \"id_wikidata\": [\n                \"Q113681573\"\n            ],\n            \"publisher_facet\": [\n                \"Blackstone Pub\",\n                \"HarperCollins B and Blackstone Publishing\",\n                \"HarperCollins Publishers\",\n                \"HarperTeen\",\n                \"Harpercollins\"\n            ],\n            \"subject_facet\": [\n                \"New York Times bestseller\",\n                \"Young adult fiction, coming of age\",\n                \"Young adult fiction, diversity & multicultural\",\n                \"Young adult fiction, romance, romantic comedy\",\n                \"nyt:young-adult-hardcover=2020-01-26\"\n            ],\n            \"_version_\": 1767909043494453248,\n            \"lcc_sort\": \"PZ-0007.10000000.W43565Lo 2020\",\n            \"author_facet\": [\n                \"OL7898165A Abigail Hing Wen\"\n            ],\n            \"subject_key\": [\n                \"new_york_times_bestseller\",\n                \"nytyoung-adult-hardcover2020-01-26\",\n                \"young_adult_fiction_coming_of_age\",\n                \"young_adult_fiction_diversity__multicultural\",\n                \"young_adult_fiction_romance_romantic_comedy\"\n            ]\n        }\n    ],\n    \"num_found\": 255,\n    \"q\": \"\",\n    \"offset\": null\n}"
+        }
+      },
+      "recorded_at": "Mon, 25 Sep 2023 16:46:11 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.2.0"
+}
