@@ -5,5 +5,9 @@ Rails.application.routes.draw do
       resources :users, only: :create
       resources :sessions, only: :create
     end
+
+    namespace :v1 do
+      get 'book-search', to: 'books#search'
+    end
   end
 end
