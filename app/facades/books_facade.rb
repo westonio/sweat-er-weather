@@ -1,11 +1,7 @@
 class BooksFacade
-  def initialize(location, quantity)
-    @location = location
-    @quantity = quantity
-  end
-
-  def search_books
-    service = BooksService.new
-    service.get_books(@location, @quantity)
+  def search_books(location, quantity)
+    book_data = BooksService.new.get_books(location, quantity)
+    weather = WeatherFacade.new(location).forecast
+    Book.new(location, weather, book_data)
   end
 end
