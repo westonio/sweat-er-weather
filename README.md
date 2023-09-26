@@ -9,7 +9,7 @@
 - Building: Ruby, Rails
 - Testing: RSpec, Capybara, ShouldaMatchers, Webmock, VCR, Postman
 - Database: PostgreSQL
-- Consuming API: Faraday HTTP client library
+- Consuming APIs: Faraday HTTP client library
 
 ### My Achievements
 - Implemented user, session, forecast, and road_trip endpoints for a front-end service to use.
