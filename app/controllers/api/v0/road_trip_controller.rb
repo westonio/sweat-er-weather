@@ -3,9 +3,9 @@ class Api::V0::RoadTripController < ApplicationController
     begin
       validate_api_key
       road_trip = RoadTripFacade.new(params[:origin], params[:destination]).plan_road_trip
-      render json: RoadTripSerializer.new(road_trip)
+      render json: RoadTripSerializer.new(road_trip), status: :ok
     rescue StandardError => e
-      require 'pry'; binding.pry
+      render json: ErrorsSerializer.new(e).serialized_json, status: :unauthorized
     end
   end
 
