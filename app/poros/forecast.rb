@@ -35,6 +35,25 @@ class Forecast
     end
   end
 
+  def find_weather_at_eta(date_time)
+    hour_data = eta_hour_weather(date_time)
+    format_eta_weather(hour_data)
+  end
+  
+  def eta_hour_weather(date_time)
+    day_data = eta_day_weather(date_time)
+    day_data[:hour].select do |hour|
+      hour[:time] == date_time.strftime("%Y-%m-%d %H:%M")
+    end.first
+  end
+
+  def eta_day_weather(date_time)
+    @data[:forecast][:forecastday].select do |day|
+      day[:date] == date_time.strftime("%Y-%m-%d")
+    end.first
+  end
+
+
 private
   def format_daily_weather(day)
     {
@@ -54,6 +73,14 @@ private
       temperature: hour[:temp_f],
       condition: hour[:condition][:text],
       icon: hour[:condition][:icon]
+    }
+  end
+
+  def format_eta_weather(data)
+    {
+      datetime: data[:time],
+      temperature: data[:temp_f],
+      condition: data[:condition][:text]
     }
   end
   
