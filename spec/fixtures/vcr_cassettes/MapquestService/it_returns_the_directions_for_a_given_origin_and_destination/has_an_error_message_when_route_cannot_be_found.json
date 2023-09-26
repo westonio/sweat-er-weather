@@ -1,0 +1,81 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://www.mapquestapi.com/directions/v2/route?from=Denver,%20CO&key=GACB7MLEb6OwTOjNljtmxCG3TDZqHq9k&to=Taipei,%20Taiwan",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Tue, 26 Sep 2023 02:04:38 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Content-Length": [
+            "278"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "X-Ratelimit-Limit-2628000": [
+            "15000"
+          ],
+          "X-Ratelimit-Remaining-2628000": [
+            "14540"
+          ],
+          "Ratelimit-Limit": [
+            "15000"
+          ],
+          "Ratelimit-Remaining": [
+            "14540"
+          ],
+          "Ratelimit-Reset": [
+            "1994122"
+          ],
+          "X-Powered-By": [
+            "MapQuest"
+          ],
+          "X-Request-Id": [
+            "0c0bbf80-5c11-11ee-a8e5-5f2f1f539db4"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "X-Transaction-Count": [
+            "all=3,geocoding=2,directions=1"
+          ],
+          "Etag": [
+            "W/\"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q\""
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"route\":{\"routeError\":{\"errorCode\":2,\"message\":\"\"}},\"info\":{\"statuscode\":402,\"copyright\":{\"text\":\"© 2023 MapQuest, Inc.\",\"imageUrl\":\"http://api.mqcdn.com/res/mqlogo.gif\",\"imageAltText\":\"© 2023 MapQuest, Inc.\"},\"messages\":[\"We are unable to route with the given locations.\"]}}"
+        }
+      },
+      "recorded_at": "Tue, 26 Sep 2023 02:04:38 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.2.0"
+}
