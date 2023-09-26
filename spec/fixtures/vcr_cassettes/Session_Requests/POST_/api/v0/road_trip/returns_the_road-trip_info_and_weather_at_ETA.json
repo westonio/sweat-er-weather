@@ -1,0 +1,303 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://www.mapquestapi.com/geocoding/v1/address?key=GACB7MLEb6OwTOjNljtmxCG3TDZqHq9k&location=Cincinatti,OH",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Mon, 25 Sep 2023 20:06:36 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Content-Length": [
+            "805"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "X-Ratelimit-Limit-2628000": [
+            "15000"
+          ],
+          "X-Ratelimit-Remaining-2628000": [
+            "14888"
+          ],
+          "Ratelimit-Limit": [
+            "15000"
+          ],
+          "Ratelimit-Remaining": [
+            "14888"
+          ],
+          "Ratelimit-Reset": [
+            "2015605"
+          ],
+          "X-Powered-By": [
+            "MapQuest"
+          ],
+          "X-Request-Id": [
+            "079c6a30-5bdf-11ee-a6bf-19b3c358d110"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Etag": [
+            "W/\"325-oN2nrIu8IGDhI+ebvTK7eJj7vt8\""
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"info\":{\"statuscode\":0,\"copyright\":{\"text\":\"© 2023 MapQuest, Inc.\",\"imageUrl\":\"http://api.mqcdn.com/res/mqlogo.gif\",\"imageAltText\":\"© 2023 MapQuest, Inc.\"},\"messages\":[]},\"options\":{\"maxResults\":-1,\"ignoreLatLngInput\":false},\"results\":[{\"providedLocation\":{\"location\":\"Cincinatti,OH\"},\"locations\":[{\"street\":\"\",\"adminArea6\":\"\",\"adminArea6Type\":\"Neighborhood\",\"adminArea5\":\"Cincinnati\",\"adminArea5Type\":\"City\",\"adminArea4\":\"Hamilton\",\"adminArea4Type\":\"County\",\"adminArea3\":\"OH\",\"adminArea3Type\":\"State\",\"adminArea1\":\"US\",\"adminArea1Type\":\"Country\",\"postalCode\":\"\",\"geocodeQualityCode\":\"A5XBX\",\"geocodeQuality\":\"CITY\",\"dragPoint\":false,\"sideOfStreet\":\"N\",\"linkId\":\"0\",\"unknownInput\":\"\",\"type\":\"s\",\"latLng\":{\"lat\":39.10713,\"lng\":-84.50413},\"displayLatLng\":{\"lat\":39.10713,\"lng\":-84.50413},\"mapUrl\":\"\"}]}]}"
+        }
+      },
+      "recorded_at": "Mon, 25 Sep 2023 20:06:36 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://www.mapquestapi.com/geocoding/v1/address?key=GACB7MLEb6OwTOjNljtmxCG3TDZqHq9k&location=Cincinatti,OH",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Mon, 25 Sep 2023 20:06:36 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Content-Length": [
+            "805"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "X-Ratelimit-Limit-2628000": [
+            "15000"
+          ],
+          "X-Ratelimit-Remaining-2628000": [
+            "14890"
+          ],
+          "Ratelimit-Limit": [
+            "15000"
+          ],
+          "Ratelimit-Remaining": [
+            "14890"
+          ],
+          "Ratelimit-Reset": [
+            "2015604"
+          ],
+          "X-Powered-By": [
+            "MapQuest"
+          ],
+          "X-Request-Id": [
+            "07d15ce0-5bdf-11ee-a6bf-19b3c358d110"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Etag": [
+            "W/\"325-oN2nrIu8IGDhI+ebvTK7eJj7vt8\""
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"info\":{\"statuscode\":0,\"copyright\":{\"text\":\"© 2023 MapQuest, Inc.\",\"imageUrl\":\"http://api.mqcdn.com/res/mqlogo.gif\",\"imageAltText\":\"© 2023 MapQuest, Inc.\"},\"messages\":[]},\"options\":{\"maxResults\":-1,\"ignoreLatLngInput\":false},\"results\":[{\"providedLocation\":{\"location\":\"Cincinatti,OH\"},\"locations\":[{\"street\":\"\",\"adminArea6\":\"\",\"adminArea6Type\":\"Neighborhood\",\"adminArea5\":\"Cincinnati\",\"adminArea5Type\":\"City\",\"adminArea4\":\"Hamilton\",\"adminArea4Type\":\"County\",\"adminArea3\":\"OH\",\"adminArea3Type\":\"State\",\"adminArea1\":\"US\",\"adminArea1Type\":\"Country\",\"postalCode\":\"\",\"geocodeQualityCode\":\"A5XBX\",\"geocodeQuality\":\"CITY\",\"dragPoint\":false,\"sideOfStreet\":\"N\",\"linkId\":\"0\",\"unknownInput\":\"\",\"type\":\"s\",\"latLng\":{\"lat\":39.10713,\"lng\":-84.50413},\"displayLatLng\":{\"lat\":39.10713,\"lng\":-84.50413},\"mapUrl\":\"\"}]}]}"
+        }
+      },
+      "recorded_at": "Mon, 25 Sep 2023 20:06:36 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://www.mapquestapi.com/directions/v2/route?from=%7B:latitude=%3E39.10713,%20:longitude=%3E-84.50413%7D&key=GACB7MLEb6OwTOjNljtmxCG3TDZqHq9k&to=%7B:latitude=%3E39.10713,%20:longitude=%3E-84.50413%7D",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Mon, 25 Sep 2023 20:06:36 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Content-Length": [
+            "278"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "X-Ratelimit-Limit-2628000": [
+            "15000"
+          ],
+          "X-Ratelimit-Remaining-2628000": [
+            "14888"
+          ],
+          "Ratelimit-Limit": [
+            "15000"
+          ],
+          "Ratelimit-Remaining": [
+            "14888"
+          ],
+          "Ratelimit-Reset": [
+            "2015604"
+          ],
+          "X-Powered-By": [
+            "MapQuest"
+          ],
+          "X-Request-Id": [
+            "08084b60-5bdf-11ee-a8e5-5f2f1f539db4"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "X-Transaction-Count": [
+            "all=2,geocoding=2"
+          ],
+          "Etag": [
+            "W/\"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q\""
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"route\":{\"routeError\":{\"errorCode\":2,\"message\":\"\"}},\"info\":{\"statuscode\":402,\"copyright\":{\"text\":\"© 2023 MapQuest, Inc.\",\"imageUrl\":\"http://api.mqcdn.com/res/mqlogo.gif\",\"imageAltText\":\"© 2023 MapQuest, Inc.\"},\"messages\":[\"We are unable to route with the given locations.\"]}}"
+        }
+      },
+      "recorded_at": "Mon, 25 Sep 2023 20:06:36 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://www.mapquestapi.com/directions/v2/route?from=39.10713,-84.50413&key=GACB7MLEb6OwTOjNljtmxCG3TDZqHq9k&to=39.10713,-84.50413",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Mon, 25 Sep 2023 20:09:56 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Content-Length": [
+            "3463"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "X-Ratelimit-Limit-2628000": [
+            "15000"
+          ],
+          "X-Ratelimit-Remaining-2628000": [
+            "14882"
+          ],
+          "Ratelimit-Limit": [
+            "15000"
+          ],
+          "Ratelimit-Remaining": [
+            "14882"
+          ],
+          "Ratelimit-Reset": [
+            "2015404"
+          ],
+          "X-Powered-By": [
+            "MapQuest"
+          ],
+          "X-Request-Id": [
+            "7f446f10-5bdf-11ee-a8e5-5f2f1f539db4"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "X-Transaction-Count": [
+            "all=3,geocoding=2,directions=1"
+          ],
+          "Etag": [
+            "W/\"d87-f5s7+07PgaMCmjLcP/AgMN8VCz0\""
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"route\":{\"sessionId\":\"AFUA5wcAAAUBAAAHAAAABQAAAIQAAAB42mNoYWBgZGJgYGDPSC1KtUrOjbB_J87AwMBwIc6pmmNx7QvnKJvz0WdqXzi72JyPZsACyNaIDAAB6h1iTeorAQ:car\",\"realTime\":0,\"distance\":0,\"time\":0,\"formattedTime\":\"00:00:00\",\"hasHighway\":false,\"hasTollRoad\":false,\"hasBridge\":false,\"hasSeasonalClosure\":false,\"hasTunnel\":false,\"hasFerry\":false,\"hasUnpaved\":false,\"hasTimedRestriction\":false,\"hasCountryCross\":false,\"legs\":[{\"index\":0,\"hasTollRoad\":false,\"hasHighway\":false,\"hasBridge\":false,\"hasUnpaved\":false,\"hasTunnel\":false,\"hasSeasonalClosure\":false,\"hasFerry\":false,\"hasCountryCross\":false,\"hasTimedRestriction\":false,\"distance\":0,\"time\":0,\"formattedTime\":\"00:00:00\",\"origIndex\":0,\"origNarrative\":\"\",\"destIndex\":0,\"destNarrative\":\"\",\"maneuvers\":[{\"index\":0,\"distance\":0,\"narrative\":\"Head north on Gilbert Ave (US-22).\",\"time\":0,\"direction\":1,\"directionName\":\"North\",\"signs\":[],\"maneuverNotes\":[],\"formattedTime\":\"00:00:00\",\"transportMode\":\"car\",\"startPoint\":{\"lat\":39.107128,\"lng\":-84.504137},\"turnType\":0,\"attributes\":0,\"iconUrl\":\"\",\"streets\":[\"US-22\",\"OH-3\",\"Gilbert Ave\"],\"mapUrl\":\"https://www.mapquestapi.com/staticmap/v5/map?key=GACB7MLEb6OwTOjNljtmxCG3TDZqHq9k&size=225,160&locations=39.107128,-84.504137|marker-1||39.107128,-84.504137|marker-2||&center=39.107128,-84.504137&defaultMarker=none&zoom=16&session=AFUA5wcAAAUBAAAHAAAABQAAAIQAAAB42mNoYWBgZGJgYGDPSC1KtUrOjbB_J87AwMBwIc6pmmNx7QvnKJvz0WdqXzi72JyPZsACyNaIDAAB6h1iTeorAQ:car\"},{\"index\":1,\"distance\":0,\"narrative\":\"Arrive at Gilbert Ave (US-22).\",\"time\":0,\"direction\":0,\"directionName\":\"None\",\"signs\":[],\"maneuverNotes\":[],\"formattedTime\":\"00:00:00\",\"transportMode\":\"car\",\"startPoint\":{\"lat\":39.107128,\"lng\":-84.504137},\"turnType\":0,\"attributes\":0,\"iconUrl\":\"\",\"streets\":[]}]}],\"options\":{\"routeType\":\"FASTEST\",\"narrativeType\":\"text\",\"enhancedNarrative\":false,\"walkingSpeed\":-1,\"highwayEfficiency\":22,\"avoids\":false,\"generalize\":-1,\"shapeFormat\":\"raw\",\"unit\":\"M\",\"locale\":\"en_US\",\"useTraffic\":false,\"timeType\":0,\"dateType\":0,\"doReverseGeocode\":true,\"manMaps\":true,\"sideOfStreetDisplay\":true},\"boundingBox\":{\"ul\":{\"lat\":39.107128,\"lng\":-84.504137},\"lr\":{\"lat\":39.107128,\"lng\":-84.504137}},\"routeWarnings\":[],\"name\":\"US-22\",\"maxRoutes\":\"\",\"locations\":[{\"street\":\"Gilbert Ave\",\"adminArea6\":\"Mount Adams\",\"adminArea6Type\":\"Neighborhood\",\"adminArea5\":\"Cincinnati\",\"adminArea5Type\":\"City\",\"adminArea4\":\"Hamilton\",\"adminArea4Type\":\"County\",\"adminArea3\":\"OH\",\"adminArea3Type\":\"State\",\"adminArea1\":\"US\",\"adminArea1Type\":\"Country\",\"postalCode\":\"45202\",\"geocodeQualityCode\":\"B1AAA\",\"geocodeQuality\":\"STREET\",\"dragPoint\":false,\"sideOfStreet\":\"N\",\"linkId\":\"0\",\"unknownInput\":\"\",\"type\":\"s\",\"latLng\":{\"lat\":39.10713,\"lng\":-84.50414},\"displayLatLng\":{\"lat\":39.10713,\"lng\":-84.50414},\"mapUrl\":\"\"},{\"street\":\"Gilbert Ave\",\"adminArea6\":\"Mount Adams\",\"adminArea6Type\":\"Neighborhood\",\"adminArea5\":\"Cincinnati\",\"adminArea5Type\":\"City\",\"adminArea4\":\"Hamilton\",\"adminArea4Type\":\"County\",\"adminArea3\":\"OH\",\"adminArea3Type\":\"State\",\"adminArea1\":\"US\",\"adminArea1Type\":\"Country\",\"postalCode\":\"45202\",\"geocodeQualityCode\":\"B1AAA\",\"geocodeQuality\":\"STREET\",\"dragPoint\":false,\"sideOfStreet\":\"N\",\"linkId\":\"0\",\"unknownInput\":\"\",\"type\":\"s\",\"latLng\":{\"lat\":39.10713,\"lng\":-84.50414},\"displayLatLng\":{\"lat\":39.10713,\"lng\":-84.50414},\"mapUrl\":\"\"}],\"locationSequence\":[0,1]},\"info\":{\"statuscode\":0,\"copyright\":{\"text\":\"© 2023 MapQuest, Inc.\",\"imageUrl\":\"http://api.mqcdn.com/res/mqlogo.gif\",\"imageAltText\":\"© 2023 MapQuest, Inc.\"},\"messages\":[]}}"
+        }
+      },
+      "recorded_at": "Mon, 25 Sep 2023 20:09:56 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.2.0"
+}

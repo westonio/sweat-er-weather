@@ -185,5 +185,61 @@ RSpec.describe Forecast, type: :poro do
     it 'can convert date-time string to time' do
       expect(forecast.send(:format_time, "2023-09-23 01:00")).to eq("01:00")
     end
+
+    context 'Weather at ETA' do 
+      let(:expected_day_data) { }
+      let(:expected_hour_data) { {:time_epoch=>1695826800,
+                                  :time=>"2023-09-27 09:00",
+                                  :temp_c=>20.7,
+                                  :temp_f=>69.3,
+                                  :is_day=>1,
+                                  :condition=>{:text=>"Sunny", :icon=>"//cdn.weatherapi.com/weather/64x64/day/113.png", :code=>1000},
+                                  :wind_mph=>4.3,
+                                  :wind_kph=>6.8,
+                                  :wind_degree=>211,
+                                  :wind_dir=>"SSW",
+                                  :pressure_mb=>1014.0,
+                                  :pressure_in=>29.95,
+                                  :precip_mm=>0.0,
+                                  :precip_in=>0.0,
+                                  :humidity=>19,
+                                  :cloud=>0,
+                                  :feelslike_c=>20.7,
+                                  :feelslike_f=>69.3,
+                                  :windchill_c=>20.7,
+                                  :windchill_f=>69.3,
+                                  :heatindex_c=>20.7,
+                                  :heatindex_f=>69.3,
+                                  :dewpoint_c=>-3.3,
+                                  :dewpoint_f=>26.0,
+                                  :will_it_rain=>0,
+                                  :chance_of_rain=>0,
+                                  :will_it_snow=>0,
+                                  :chance_of_snow=>0,
+                                  :vis_km=>10.0,
+                                  :vis_miles=>6.0,
+                                  :gust_mph=>5.4,
+                                  :gust_kph=>8.7,
+                                  :uv=>6.0} }
+                                  
+      it '#find_weather_at_eta' do
+        date_time = "2023-09-27 09:00:00 -0600".to_time
+        expected = {:condition=>"Sunny", :datetime=>"2023-09-27 09:00", :temperature=>69.3}
+
+        expect(forecast.find_weather_at_eta(date_time)).to eq(expected)
+      end
+
+      it '#eta_hour_weather' do
+        date_time = "2023-09-27 09:00:00 -0600".to_time
+
+        expect(forecast.eta_hour_weather(date_time)).to eq(expected_hour_data)
+      end
+
+      it 'formats the ETA weather' do
+        hour_data = expected_hour_data
+        expected = {:condition=>"Sunny", :datetime=>"2023-09-27 09:00", :temperature=>69.3}
+        expect(forecast.send(:format_eta_weather, hour_data)).to eq(expected)
+      end
+    end
   end
 end

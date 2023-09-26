@@ -1,5 +1,10 @@
 class MapquestService
 
+  def get_trip_route(origin, destination)
+    get_url("/directions/v2/route?from=#{origin}&to=#{destination}")
+  end
+
+
   def get_lat_lon(location)
     get_url("/geocoding/v1/address?location=#{location}")
   end

@@ -40,4 +40,43 @@ RSpec.describe MapquestService, :vcr do
       expect(location[:displayLatLng][:lng]).to be_a(Float)
     end
   end
+
+  context 'it returns the directions for a given origin and destination' do
+    it 'has the necessary time information for valid locations' do
+      origin = "Denver, CO" 
+      destination = "New York, NY" 
+      service = MapquestService.new
+      response = service.get_trip_route(origin, destination)
+
+      expect(response).to have_key(:route)
+      expect(response[:route]).to be_a(Hash)
+
+      route = response[:route]
+
+      expect(route).to have_key(:time)
+      expect(route[:time]).to be_an(Integer)
+      expect(route).to have_key(:formattedTime)
+      expect(route[:formattedTime]).to be_a(String)
+    end
+
+    it 'has an error message when route cannot be found' do
+      origin = "Denver, CO" 
+      destination = "Taipei, Taiwan" 
+      service = MapquestService.new
+      response = service.get_trip_route(origin, destination)
+
+      expect(response).to have_key(:route)
+      expect(response[:route]).to be_a(Hash)
+
+      route = response[:route]
+
+      expect(route).to have_key(:routeError)
+      expect(route[:routeError]).to be_a(Hash)
+
+      expect(route[:routeError]).to have_key(:errorCode)
+      expect(route[:routeError][:errorCode]).to be_an(Integer)
+      expect(route[:routeError]).to have_key(:message)
+      expect(route[:routeError][:message]).to be_a(String)
+    end
+  end
 end
