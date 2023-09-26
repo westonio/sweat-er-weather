@@ -64,7 +64,7 @@ RSpec.describe 'Session Requests', type: :request do
 
     context 'with an invalid api_key' do
       it 'returns an error' do
-        user = User.create!(email: "myemail@example.com", password: "password", password_confirmation: "password")
+        User.create!(email: "myemail@example.com", password: "password", password_confirmation: "password")
         params = {
           origin: "Cincinatti,OH",
           destination: "Chicago,IL",
