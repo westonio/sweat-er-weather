@@ -8,7 +8,7 @@ RSpec.describe 'Session Requests', type: :request do
         params = {
           origin: "Cincinatti,OH",
           destination: "Chicago,IL",
-          api_key: "a89b6233-2966-4b20-9817-08952af9f45c"
+          api_key: user.api_key
         }
         headers = {"CONTENT_TYPE" => "application/json"}
 
